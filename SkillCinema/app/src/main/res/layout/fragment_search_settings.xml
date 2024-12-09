@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbarIncluded"
+        layout="@layout/toolbar_with_back_icon" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarIncluded">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbarIncluded">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/showTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/search_settings_show_this_text"
+                android:textAppearance="@style/BaseSmallGreyText" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/movieTypeToggleButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/showTextView"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <Button
+                    android:id="@+id/allButton"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/search_settings_toggle_all" />
+
+                <Button
+                    android:id="@+id/filmsButton"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/search_settings_toggle_films" />
+
+                <Button
+                    android:id="@+id/seriesButton"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/search_settings_toggle_series" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <include
+                android:id="@+id/countryBlock"
+                layout="@layout/search_parameter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"/>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/genreBlock"
+                layout="@layout/search_parameter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/yearParameterBlock"
+                layout="@layout/search_parameter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/ratingParameterBlock"
+                layout="@layout/search_parameter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp">
+
+                <com.google.android.material.slider.RangeSlider
+                    android:id="@+id/ratingSlider1"
+                    style="@style/Widget.MaterialComponents.Slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:pointerIcon="none"
+                    android:scrollIndicators="none"
+                    android:valueFrom="0"
+                    android:valueTo="10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/rating1TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/search_settings_rating_range_min"
+                    android:textAppearance="@style/BaseSmallGreyText"
+                    app:layout_constraintStart_toStartOf="@id/ratingSlider1"
+                    app:layout_constraintTop_toBottomOf="@+id/ratingSlider1" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/rating10TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:text="@string/search_settings_rating_range_max"
+                    android:textAppearance="@style/BaseSmallGreyText"
+                    app:layout_constraintEnd_toEndOf="@+id/ratingSlider1"
+                    app:layout_constraintTop_toBottomOf="@+id/ratingSlider1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sortTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/search_settings_sort_text"
+                android:textAppearance="@style/BaseSmallGreyText" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/sortTypeToggleButton1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sortTextView"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <Button
+                    android:id="@+id/dateButton1"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/search_settings_sort_date" />
+
+                <Button
+                    android:id="@+id/popularsButton1"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/search_settings_sort_popular" />
+
+                <Button
+                    android:id="@+id/ratingButton1"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/search_settings_sort_rating" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider51"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+
+
+            <include
+                android:id="@+id/viewedParameterBlock"
+                layout="@layout/search_parameter_viewed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

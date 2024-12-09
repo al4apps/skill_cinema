@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_search"
+    app:startDestination="@id/searchFragment">
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.al4apps.skillcinema.presentation.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_searchSettingsFragment"
+            app:destination="@id/searchSettingsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_searchFragment_to_navigation_in_movie"
+            app:destination="@id/navigation_in_movie3" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchSettingsFragment"
+        android:name="com.al4apps.skillcinema.presentation.searchsettings.SearchSettingsFragment"
+        android:label="SearchSettingsFragment"
+        tools:layout="@layout/fragment_search_settings">
+        <action
+            android:id="@+id/action_searchSettingsFragment_to_searchGenreCountryFragment"
+            app:destination="@id/searchGenreCountryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_searchSettingsFragment_to_yearsFragment"
+            app:destination="@id/yearsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/searchGenreCountryFragment"
+        android:name="com.al4apps.skillcinema.presentation.searchsettings.genreandcountry.SearchGenreCountryFragment"
+        android:label="SearchGenreCountryFragment"
+        tools:layout="@layout/fragment_search_genre_country">
+        <argument
+            android:name="type"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/yearsFragment"
+        android:name="com.al4apps.skillcinema.presentation.searchsettings.years.YearsFragment"
+        android:label="YearsFragment"
+        tools:layout="@layout/fragment_years"/>
+
+    <include app:graph="@navigation/nav_in_movie" />
+
+    <!--        <navigation android:id="@+id/navigation_in_movie2"-->
+<!--        app:startDestination="@id/movieFragment2">-->
+<!--        <fragment-->
+<!--            android:id="@+id/movieFragment2"-->
+<!--            android:name="com.al4apps.skillcinema.presentation.movie.MovieFragment"-->
+<!--            android:label="MovieFragment">-->
+<!--            <argument-->
+<!--                android:name="kinopoiskId"-->
+<!--                app:argType="integer"-->
+<!--                android:defaultValue="-1" />-->
+<!--        </fragment>-->
+<!--        <argument-->
+<!--            android:name="kinopoiskId"-->
+<!--            app:argType="integer"-->
+<!--            android:defaultValue="-1" />-->
+<!--    </navigation>-->
+
+</navigation>

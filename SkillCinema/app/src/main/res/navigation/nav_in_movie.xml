@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_in_movie3"
+    app:startDestination="@id/movieFragment2">
+
+    <argument
+        android:name="kinopoiskId"
+        android:defaultValue="-1"
+        app:argType="integer" />
+
+    <fragment
+        android:id="@+id/movieFragment2"
+        android:name="com.al4apps.skillcinema.presentation.movie.MovieFragment"
+        android:label="MovieFragment"
+        tools:layout="@layout/fragment_movie">
+        <argument
+            android:name="kinopoiskId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_movieFragment_to_staffListFragment"
+            app:destination="@id/staffListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_movieFragment_to_imagesFragment"
+            app:destination="@id/imagesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_movieFragment_to_staffFragment"
+            app:destination="@id/staffFragment" />
+        <action
+            android:id="@+id/action_movieFragment_to_seriesFragment"
+            app:destination="@id/seriesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_movieFragment2_self"
+            app:destination="@id/movieFragment2" />
+        <action
+            android:id="@+id/action_movieFragment2_to_moviesFragment2"
+            app:destination="@id/moviesFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/moviesFragment2"
+        android:name="com.al4apps.skillcinema.presentation.movies.MoviesFragment"
+        android:label="MoviesFragment"
+        tools:layout="@layout/fragment_movies">
+        <argument
+            android:name="collectionType"
+            app:argType="com.al4apps.skillcinema.domain.model.MovieCollectionType" />
+        <argument
+            android:name="genreId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <argument
+            android:name="countryId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <argument
+            android:name="kinopoiskId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_moviesFragment_to_movieFragment"
+            app:destination="@id/movieFragment2" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/staffListFragment"
+        android:name="com.al4apps.skillcinema.presentation.stafflist.StaffListFragment"
+        android:label="StaffListFragment"
+        tools:layout="@layout/fragment_staff_list">
+        <argument
+            android:name="kinopoiskId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <argument
+            android:name="staffType"
+            android:defaultValue="EXCEPT_ACTOR"
+            app:argType="com.al4apps.skillcinema.domain.model.StaffType" />
+        <action
+            android:id="@+id/action_staffListFragment_to_staffFragment"
+            app:destination="@id/staffFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imagesFragment"
+        android:name="com.al4apps.skillcinema.presentation.images.ImagesFragment"
+        android:label="ImagesFragment"
+        tools:layout="@layout/fragment_images">
+        <argument
+            android:name="kinopoiskId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/staffFragment"
+        android:name="com.al4apps.skillcinema.presentation.staff.PersonFragment"
+        android:label="StaffFragment"
+        tools:layout="@layout/fragment_person">
+        <argument
+            android:name="personId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_staffFragment_to_movieFragment"
+            app:destination="@id/movieFragment2" />
+        <action
+            android:id="@+id/action_staffFragment_to_filmsWithPersonFragment"
+            app:destination="@id/filmsWithPersonFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/filmsWithPersonFragment"
+        android:name="com.al4apps.skillcinema.presentation.personfilms.FilmsWithPersonFragment"
+        android:label="FilmsWithPersonFragment"
+        tools:layout="@layout/fragment_films_with_person">
+        <argument
+            android:name="personId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_filmsWithPersonFragment_to_movieFragment"
+            app:destination="@id/movieFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/seriesFragment"
+        android:name="com.al4apps.skillcinema.presentation.series.SeriesFragment"
+        android:label="SeriesFragment"
+        tools:layout="@layout/fragment_series">
+        <argument
+            android:name="kinopoiskId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <argument
+            android:name="filmName"
+            app:argType="string" />
+    </fragment>
+</navigation>

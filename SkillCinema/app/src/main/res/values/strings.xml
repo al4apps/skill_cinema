@@ -1,0 +1,221 @@
+<resources>
+    <string name="app_name" translatable="false">SkillCinema</string>
+
+    <!--    Onboarding  -->
+    <string name="onboarding_text_page_1">Узнавай о премьерах</string>
+    <string name="onboarding_text_page_2">Создавай коллекции</string>
+    <string name="onboarding_text_page_3">Делись с друзьями</string>
+    <string name="onboarding_skip_text">Пропустить</string>
+    <string name="onboarding_continue_button_text">Продолжить</string>
+
+    <!--    Navigation menu -->
+    <string name="menu_home_title">Главная</string>
+    <string name="menu_search_title">Поиск</string>
+    <string name="menu_user_title">Профиль</string>
+
+    <!--    Home -->
+    <string name="item_movie_all_movies_text">Все</string>
+    <string name="item_movie_show_all_movies_text">Показать все</string>
+
+    <!--    Movie type -->
+    <string name="movie_type_premieres_title">Премьеры</string>
+    <string name="movie_type_populars_title">Популярное</string>
+    <string name="movie_type_top250_title">Топ-250</string>
+    <string name="movie_type_series_title">Сериалы</string>
+    <string name="movie_type_similar_title">Похожие фильмы</string>
+    <string name="movie_type_with_person_title">Фильмы с участием</string>
+    <string name="movie_type_dynamic_title" translatable="false">%s %s</string>
+    <string name="movie_type_from_db_watched_title">Просмотренные</string>
+    <string name="movie_type_from_db_interesting_title">Вам было интересно</string>
+
+    <!--    Genres -->
+    <string name="movie_genre_thrillers">Триллеры</string>
+    <string name="movie_genre_dramas">Драмы</string>
+    <string name="movie_genre_crimes">Криминалы</string>
+    <string name="movie_genre_melodramas">Мелодрамы</string>
+    <string name="movie_genre_detectives">Детективы</string>
+    <string name="movie_genre_fantastic">Фантастика</string>
+    <string name="movie_genre_adventures">Приключения</string>
+    <string name="movie_genre_westerns">Вестерны</string>
+    <string name="movie_genre_action">Боевики</string>
+    <string name="movie_genre_fantasy">Фэнтези</string>
+    <string name="movie_genre_comedies">Комедии</string>
+    <string name="movie_genre_horrors">Ужасы</string>
+    <string name="movie_genre_cartoons">Мультфильмы</string>
+    <string name="movie_genre_anime">Аниме</string>
+    <string name="movie_genre_basic">Фильмы</string>
+    <string name="movie_genre_any">любой</string>
+    <!--    Countries -->
+    <string name="movie_country_any">любая</string>
+    <string name="movie_country_usa">США</string>
+    <string name="movie_country_france">Франции</string>
+    <string name="movie_country_russia">России</string>
+    <string name="movie_country_great_britain">Англии</string>
+    <string name="movie_country_japan">Японии</string>
+    <string name="movie_country_spain">Испании</string>
+    <string name="movie_country_india">Индии</string>
+    <string name="movie_country_south_korea">Южной Кореи</string>
+    <string name="movie_country_ussr">СССР</string>
+    <string name="movie_country_empty"> </string>
+
+    <!--    Movie Info -->
+    <string name="movie_info_country_length_age">%s, %s, %s</string>
+    <string name="movie_info_year_genres">%d, %s</string>
+    <string name="movie_info_rating_name">%s %s</string>
+    <string name="movie_info_hours_minutes">%d ч %d мин</string>
+    <string name="movie_info_season_series_title_text">Сезоны и серии</string>
+    <string name="movie_info_all_series_button_text">Все</string>
+    <string name="movie_info_actors_block_title">В фильме снимались</string>
+    <string name="movie_info_staff_block_title">Над фильмом работали</string>
+    <string name="movie_info_images_block_title">Галерея</string>
+    <string name="movie_info_similar_block_title">Похожие фильмы</string>
+    <string name="movie_info_item_count" translatable="false">%d ></string>
+    <plurals name="movie_info_seasons_with_quantity">
+        <item quantity="zero"> </item>
+        <item quantity="one">%d сезон</item>
+        <item quantity="two">%d сезона</item>
+        <item quantity="few">%d сезона</item>
+        <item quantity="many">%d сезонов</item>
+        <item quantity="other">%d сезонов</item>
+    </plurals>
+    <plurals name="movie_info_episodes_with_quantity">
+        <item quantity="zero"> </item>
+        <item quantity="one">%d серия</item>
+        <item quantity="two">%d серии</item>
+        <item quantity="few">%d серии</item>
+        <item quantity="many">%d серий</item>
+        <item quantity="other">%d серий</item>
+    </plurals>
+    <string name="movie_info_seasons_and_episodes_text">%s, %s</string>
+
+    <!--    Staff list -->
+    <string name="staff_list_actors_list_title">В фильме снимались</string>
+    <string name="staff_list_staff_title">Над фильмом работали</string>
+
+    <!--    Images -->
+    <string name="images_list_filter_still">Кадры</string>
+    <string name="images_list_filter_poster">Постеры</string>
+    <string name="images_list_filter_shooting">Со съемок</string>
+    <string name="staff_all_films_title_text">Фильмография</string>
+    <string name="staff_to_films_button_text">К списку ></string>
+
+    <!--    Staff -->
+    <string name="staff_profession_director_name">Режиссёр</string>
+    <string name="staff_profession_actor_name">Актёр</string>
+    <string name="staff_profession_actor_female_name">Актриса</string>
+    <string name="staff_profession_producer_name">Продюсер</string>
+    <string name="staff_profession_writer_name">Сценарист</string>
+    <string name="staff_profession_himself_name">Играет самого себя</string>
+    <string name="staff_profession_himself_female_name">Играет саму себя</string>
+    <plurals name="person_films_count_text">
+        <item quantity="zero">%d фильмов</item>
+        <item quantity="one">%d фильм</item>
+        <item quantity="two">%d фильма</item>
+        <item quantity="few">%d фильма</item>
+        <item quantity="many">%d фильмов</item>
+        <item quantity="other">%d фильмов</item>
+    </plurals>
+    <string name="staff_best_films_title">Лучшее</string>
+    <string name="staff_best_films_placeholder_movie_title">Загружаем</string>
+
+    <!--    Films with person -->
+    <string name="films_with_person_chip_text">%s (%d)</string>
+    <string name="series_season_text">Сезон</string>
+
+    <!--    Series -->
+    <string name="series_episode_number_with_title_text">%d серия. %s</string>
+    <string name="series_episode_info_text">%d %s %d</string>
+    <string name="series_episode_month_1">января</string>
+    <string name="series_episode_month_2">февраля</string>
+    <string name="series_episode_month_3">марта</string>
+    <string name="series_episode_month_4">апреля</string>
+    <string name="series_episode_month_5">мая</string>
+    <string name="series_episode_month_6">июня</string>
+    <string name="series_episode_month_7">июля</string>
+    <string name="series_episode_month_8">августа</string>
+    <string name="series_episode_month_9">сентября</string>
+    <string name="series_episode_month_10">октября</string>
+    <string name="series_episode_month_11">ноября</string>
+    <string name="series_episode_month_12">декабря</string>
+    <string name="series_item_season_text">%d сезон, %s</string>
+    <plurals name="episodes_count_text">
+        <item quantity="zero">%d серий</item>
+        <item quantity="one">%d серия</item>
+        <item quantity="two">%d серии</item>
+        <item quantity="few">%d серии</item>
+        <item quantity="many">%d серий</item>
+        <item quantity="other">%d серий</item>
+    </plurals>
+
+    <!--    Search -->
+    <string name="search_field_hint">Фильмы, актёры, режиссёры</string>
+    <string name="search_no_results_text">К сожалению, по вашему запросу ничего не найдено</string>
+
+    <!--    Search settings -->
+    <string name="search_settings_toolbar_title">Настройки поиска</string>
+    <string name="search_settings_show_this_text">Показывать</string>
+    <string name="search_settings_sort_text">Сортировать</string>
+    <string name="search_settings_toggle_all">Все</string>
+    <string name="search_settings_toggle_films">Фильмы</string>
+    <string name="search_settings_toggle_series">Сериалы</string>
+    <string name="search_settings_country">Страна</string>
+    <string name="search_settings_genre">Жанр</string>
+    <string name="search_settings_year">Год</string>
+    <string name="search_settings_rating">Рейтинг</string>
+    <string name="search_settings_sort_date">Дата</string>
+    <string name="search_settings_sort_popular">Популярность</string>
+    <string name="search_settings_sort_rating">Рейтинг</string>
+
+    <string name="search_settings_search_country_hint">Введите страну</string>
+    <string name="search_settings_search_genre_hint">Введите жанр</string>
+    <string name="search_settings_search_year_range_from_text">Искать в период c</string>
+    <string name="search_settings_search_year_range_to_text">Искать в период до</string>
+    <string name="search_settings_select_button_text">Выбрать</string>
+    <string name="search_settings_year_text_any">любой</string>
+    <string name="search_settings_year_min_max">с %d по %d</string>
+    <string name="search_settings_year_min">с %d</string>
+    <string name="search_settings_year_max">по %d</string>
+    <string name="search_settings_rating_text_any">любой</string>
+    <string name="search_settings_rating_text_from_0_to">до %d</string>
+    <string name="search_settings_rating_text_from_number">от %d</string>
+    <string name="search_settings_rating_text_from_n_to_m">от %d до %d</string>
+    <string name="search_settings_rating_range_min" translatable="false">1</string>
+    <string name="search_settings_rating_range_max" translatable="false">10</string>
+    <string name="search_settings_hide_text">Скрывать</string>
+    <string name="search_settings_viewed_text">Просмотрен</string>
+    <string name="search_settings_not_viewed_text">Не просмотрен</string>
+
+    <!--    Search filters Country / Genre -->
+    <string name="search_filters_title_country">Страна</string>
+    <string name="search_filters_title_genre">Жанр</string>
+
+    <!--    Search Settings Years -->
+    <string name="search_years_title">Период</string>
+    <string name="search_years_range_min_max">%d - %d</string>
+    <string name="search_years_range_1_year">%d</string>
+    <string name="search_years_range_incorrect_toast">Неверно указан период</string>
+
+    <!--    Transitions -->
+    <string name="movie_transition_name" translatable="false">movie_transition_name</string>
+    <string name="person_transition_name" translatable="false">person_transition_name</string>
+    <string name="search_movie_transition_name" translatable="false">search_movie_transition_name</string>
+    <string name="item_transition_name" translatable="false">item_%d</string>
+
+    <!--    Profile -->
+    <string name="profile_collections_block_title_text">Коллекции</string>
+    <string name="profile_collection_add_collection_text">Создать свою коллекцию</string>
+    <string name="profile_collection_likes_name">Любимое</string>
+    <string name="profile_collection_to_watch_name">Хочу посмотреть</string>
+    <string name="profile_new_collection_dialog_title">Придумайте название для вашей новой коллекции</string>
+    <string name="profile_new_collection_dialog_ok_button_text">Готово</string>
+    <string name="profile_delete_collection_dialog_title">Удалить коллекцию?</string>
+    <string name="profile_delete_collection_dialog_yes_button">Да</string>
+    <string name="profile_delete_collection_dialog_no_button">Нет</string>
+    <string name="profile_clear_history_text">Очистить историю</string>
+    <string name="profile_clear_text">Очистить</string>
+
+    <!--    BottomSheetDialog on Movie -->
+    <string name="bottom_dialog_add_to_collection_title">Добавить в коллекцию</string>
+    <string name="bottom_dialog_add_new_collection_text">Создать свою коллекцию</string>
+
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_in_person"
+    app:startDestination="@id/personFragment">
+
+    <fragment
+        android:id="@+id/personFragment"
+        android:name="com.al4apps.skillcinema.presentation.staff.PersonFragment"
+        android:label="PersonFragment"
+        tools:layout="@layout/fragment_person">
+        <action
+            android:id="@+id/action_personFragment_to_navigation_in_movie3"
+            app:destination="@id/navigation_in_movie3" />
+        <action
+            android:id="@+id/action_personFragment_to_filmsWithPersonFragment2"
+            app:destination="@id/filmsWithPersonFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+    </fragment>
+    <include app:graph="@navigation/nav_in_movie" />
+    <fragment
+        android:id="@+id/filmsWithPersonFragment2"
+        android:name="com.al4apps.skillcinema.presentation.personfilms.FilmsWithPersonFragment"
+        android:label="FilmsWithPersonFragment"
+        tools:layout="@layout/fragment_films_with_person">
+        <argument
+            android:name="personId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_filmsWithPersonFragment2_to_navigation_in_movie3"
+            app:destination="@id/navigation_in_movie3" />
+    </fragment>
+</navigation>

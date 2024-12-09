@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="16dp"
+    tools:context=".presentation.user.UserFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.al4apps.skillcinema.presentation.home.MoviesBlockView
+            android:id="@+id/watchedMoviesBlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/collectionsBlockTitleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_collections_block_title_text"
+                android:textAppearance="@style/BaseBoldTitleMediumStyle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/addNewCollectionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:paddingVertical="8dp"
+                app:layout_constraintStart_toStartOf="@+id/collectionsBlockTitleTextView"
+                app:layout_constraintTop_toBottomOf="@+id/collectionsBlockTitleTextView">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/plusImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:src="@drawable/icon_plus" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/addNewCollectionTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/profile_collection_add_collection_text"
+                    android:textAppearance="@style/ProfileAddCollectionTextStyle" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/collectionsRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addNewCollectionLayout"
+                app:spanCount="2"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_collection" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.al4apps.skillcinema.presentation.home.MoviesBlockView
+            android:id="@+id/interestingMoviesBlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clearHistoryLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintStart_toStartOf="@+id/collectionsBlockTitleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/collectionsBlockTitleTextView">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/trashImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_trash"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/clearHistoryTextView"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/clearHistoryTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="0dp"
+                android:text="@string/profile_clear_history_text"
+                android:textAppearance="@style/BaseMediumTextStyle"
+                app:layout_constraintBottom_toBottomOf="@+id/trashImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/trashImageView"
+                app:layout_constraintTop_toTopOf="@+id/trashImageView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

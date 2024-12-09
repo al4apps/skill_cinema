@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="16dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view2"
+        android:background="@color/color_grey_3"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="16dp"
+        android:layout_height="6dp" />
+    <View
+        android:id="@+id/view22"
+        android:background="@color/color_grey_3"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_height="5dp" />
+    <View
+        android:id="@+id/view3"
+        android:background="@color/color_grey_3"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_height="5dp" />
+    <View
+        android:id="@+id/view4"
+        android:background="@color/color_grey_3"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_height="5dp" />
+    <View
+        android:id="@+id/view5"
+        android:background="@color/color_grey_3"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_height="5dp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

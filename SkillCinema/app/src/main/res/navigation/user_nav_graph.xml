@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_user"
+    app:startDestination="@id/userFragment">
+
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.al4apps.skillcinema.presentation.user.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" >
+        <action
+            android:id="@+id/action_userFragment_to_navigation_in_movie3"
+            app:destination="@id/navigation_in_movie3" />
+        <action
+            android:id="@+id/action_userFragment_to_moviesDbFragment"
+            app:destination="@id/moviesDbFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_userFragment_to_nav_in_person"
+            app:destination="@id/nav_in_person" />
+    </fragment>
+    <include app:graph="@navigation/nav_in_movie" />
+    <fragment
+        android:id="@+id/moviesDbFragment"
+        android:name="com.al4apps.skillcinema.presentation.moviesdb.MoviesDbFragment"
+        android:label="MoviesDbFragment" >
+        <argument
+            android:name="collectionId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_moviesDbFragment_to_navigation_in_movie3"
+            app:destination="@id/navigation_in_movie3" />
+
+    </fragment>
+    <include app:graph="@navigation/nav_in_person" />
+</navigation>

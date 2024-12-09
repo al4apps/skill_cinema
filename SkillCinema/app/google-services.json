@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "957172779546",
+    "project_id": "final-project-2024-31b71",
+    "storage_bucket": "final-project-2024-31b71.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957172779546:android:3ba804a6ca4750390bdfa3",
+        "android_client_info": {
+          "package_name": "com.al4apps.skillcinema"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyJ_eUEhoZ-HVnpPPF3t9-6Ipt-uv5V9k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

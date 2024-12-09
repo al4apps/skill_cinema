@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/posterImageView"
+        android:layout_width="300dp"
+        android:layout_height="450dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/poster_gradient"
+        app:layout_constraintBottom_toBottomOf="@+id/posterImageView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/infoContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/posterImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/heartImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/heart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bookmarkImageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/bookmarkImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/bookmark"
+        app:layout_constraintBottom_toBottomOf="@+id/heartImageView"
+        app:layout_constraintEnd_toStartOf="@+id/eyeImageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/heartImageView"
+        app:layout_constraintTop_toTopOf="@id/heartImageView" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/eyeImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/eye_closed"
+        app:layout_constraintBottom_toBottomOf="@+id/heartImageView"
+        app:layout_constraintEnd_toStartOf="@+id/shareImageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bookmarkImageView"
+        app:layout_constraintTop_toTopOf="@id/heartImageView" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/shareImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/share"
+        app:layout_constraintBottom_toBottomOf="@+id/heartImageView"
+        app:layout_constraintEnd_toStartOf="@+id/othersImageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/eyeImageView"
+        app:layout_constraintTop_toTopOf="@id/heartImageView" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/othersImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/other_hor"
+        app:layout_constraintBottom_toBottomOf="@+id/heartImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shareImageView"
+        app:layout_constraintTop_toTopOf="@id/heartImageView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textAppearance="@style/InfoTextOnPosterStyle"
+        android:id="@+id/countryLengthAgeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/graphik_regular"
+        app:layout_constraintBottom_toTopOf="@+id/heartImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Россия, 1 ч 33 мин, 16+" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/yearGenresTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="@font/graphik_regular"
+        android:textAppearance="@style/InfoTextOnPosterStyle"
+        app:layout_constraintBottom_toTopOf="@+id/countryLengthAgeTextView"
+        app:layout_constraintEnd_toEndOf="@+id/countryLengthAgeTextView"
+        app:layout_constraintStart_toStartOf="@+id/countryLengthAgeTextView"
+        tools:text="2020, драма, приключения" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ratingNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="@font/graphik_regular"
+        android:textAppearance="@style/InfoTextOnPosterStyle"
+        app:layout_constraintBottom_toTopOf="@+id/yearGenresTextView"
+        app:layout_constraintEnd_toEndOf="@+id/countryLengthAgeTextView"
+        app:layout_constraintStart_toStartOf="@+id/countryLengthAgeTextView"
+        tools:text="6.4 Китобой" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/filmLogoImageView"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/ratingNameTextView"
+        app:layout_constraintEnd_toEndOf="@+id/countryLengthAgeTextView"
+        app:layout_constraintStart_toStartOf="@+id/countryLengthAgeTextView"
+        tools:src="@tools:sample/backgrounds/scenic"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

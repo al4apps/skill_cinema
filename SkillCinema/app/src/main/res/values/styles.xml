@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    Base -->
+    <style name="BaseButtonTextStyle" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/home_list_blue_text_color</item>
+    </style>
+
+    <style name="BaseBoldTitleMediumStyle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/graphik_bold</item>
+    </style>
+
+    <style name="BaseSmallTitleStyle" parent="TextAppearance.Material3.TitleSmall">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+    </style>
+
+    <style name="BaseMediumTextStyle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/graphik_medium</item>
+    </style>
+
+    <style name="BaseSmallGreyText" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+    </style>
+
+    <!--    Onboarding -->
+    <style name="OnboardingSkipTextStyle" parent="BaseButtonTextStyle">
+        <item name="android:textColor">@color/onboarding_skip_text_color_grey</item>
+    </style>
+
+    <style name="OnboardingTitleTextStyle" parent="TextAppearance.Material3.TitleSmall">
+        <item name="android:textSize">32sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+    </style>
+
+    <!--    Home -->
+    <style name="HomeListTitleStyle" parent="BaseBoldTitleMediumStyle" />
+
+    <style name="HomeListButtonTextStyle" parent="BaseButtonTextStyle" />
+
+    <style name="ItemTitleTextStyle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+    </style>
+
+    <style name="ItemGreyTextStyle" parent="BaseSmallTitleStyle">
+        <item name="android:textColor">@color/item_movie_genre_text_color_grey</item>
+    </style>
+
+    <style name="ItemMovieRatingTextStyle" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">9sp</item>
+        <item name="android:fontFamily">@font/graphik_medium</item>
+        <item name="android:textColor">@color/material_white</item>
+    </style>
+
+    <style name="ToolbarTextStyle" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+    </style>
+
+    <!--    Movie info -->
+    <style name="InfoTextOnPosterStyle" parent="BaseSmallTitleStyle">
+        <item name="android:textColor">@color/info_text_on_poster_color_grey</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="MovieInfoDescriptionStyle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+    </style>
+
+    <style name="MovieInfoDescriptionTitleStyle" parent="MovieInfoDescriptionStyle">
+        <item name="android:fontFamily">@font/graphik_black</item>
+    </style>
+
+    <style name="MovieInfoBlocksTitleStyle" parent="BaseBoldTitleMediumStyle" />
+
+    <style name="MovieInfoButtonTextStyle" parent="BaseButtonTextStyle" />
+
+    <!--    Staff page -->
+    <style name="StaffPageStaffNameStyle" parent="BaseBoldTitleMediumStyle">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="StaffPageStaffProfessionTitleStyle" parent="BaseSmallTitleStyle">
+        <item name="android:textColor">@color/staff_page_profession_text_color_grey</item>
+    </style>
+
+    <!--    Series -->
+    <style name="ItemSeasonGreyText" parent="BaseMediumTextStyle">
+        <item name="android:textColor">@color/color_grey_2</item>
+    </style>
+
+    <style name="ItemSeriesSmallGreyText" parent="BaseMediumTextStyle">
+        <item name="android:textColor">@color/color_grey_2</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="SearchNoResultTextStyle" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:fontFamily">@font/graphik_medium</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="SearchSettingsParametersTextStyle" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:fontFamily">@font/graphik_medium</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="SearchSettingsParametersGreyTextStyle" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:fontFamily">@font/graphik_medium</item>
+        <item name="android:textColor">@color/color_grey_2</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SearchSettingsYearRangeTextStyle" parent="BaseBoldTitleMediumStyle">
+        <item name="android:textColor">@color/color_blue</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="SearchSettingsYearTextStyle" parent="SearchSettingsYearRangeTextStyle">
+        <item name="android:textColor">@color/base_text_black</item>
+    </style>
+
+    <style name="ProfileAddCollectionTextStyle" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+    </style>
+
+</resources>
