@@ -36,6 +36,6 @@
 ## Скриншоты
 
 <img src="https://github.com/al4apps/test-repo/blob/master/Screenshot_2024-12-09-22-08-22-722_com.al4apps.skillcinema.jpg" height="500"/> <img src="https://github.com/al4apps/test-repo/blob/master/Screenshot_2024-12-09-22-23-52-832_com.al4apps.skillcinema.jpg" height="500"/>
-<img src="https://github.com/al4apps/test-repo/blob/master/Screenshot_2024-12-09-22-24-35-327_com.al4apps.skillcinema.jpg" height="500"/>
-<img src="https://github.com/al4apps/test-repo/blob/master/Screenshot_2024-12-09-22-27-45-136_com.al4apps.skillcinema.jpg" height="500"/>
+
+<img src="https://github.com/al4apps/test-repo/blob/master/Screenshot_2024-12-09-22-24-35-327_com.al4apps.skillcinema.jpg" height="500"/> <img src="https://github.com/al4apps/test-repo/blob/master/Screenshot_2024-12-09-22-27-45-136_com.al4apps.skillcinema.jpg" height="500"/>
 
